@@ -1,0 +1,84 @@
+# Facebook Lite 530.0.0.8.106 -> 536.0.0.11.107: every obfuscated name the extensions use.
+# Check with: python3 check-fields.py <530 smali|pkl> <536 smali|pkl> mapping-530-to-536.txt
+
+# Classes
+X/09K X/09V          # app class loader (primary dex); instance A0A -> A08, dex files A02 -> A01
+X/1DY X/1E8          # props decoder, replaced by hideads
+X/0gn X/0hc          # component interface; child list AF0() -> ADt()
+X/0Fu X/0Fn          # decode input (now an interface)
+X/1Hr X/1I5          # decode target (now abstract)
+X/0gs X/0hg          # container component
+X/0gp X/0hd          # component
+X/0hW X/0i5          # text component; text AIW() -> AHV() (interface X/0hQ -> X/0i1)
+X/0zb X/12u          # FbLiteRecyclerView list; horizontal AQS() -> APY()
+X/0z8 X/12L          # list item
+X/0z2 X/12F          # item wrapper holding the component tree
+X/0mk X/0nc          # item wrapper interface
+X/0yV X/11f          # list item list
+X/0yb X/11l          # snap helper; static A00(X/11f,I,I) unchanged
+X/10M X/13f          # snap handler; A04(I) unchanged
+X/1cF X/1q0          # video listener; end of video AYK() -> AVm() (dispatch switch in X/3jN -> X/3mG)
+X/1zU X/20I          # video listener list; A02(listener) unchanged
+X/0t0 X/0u8          # video props
+X/1dR X/1SZ          # video player
+X/2Ab X/2Mf          # full screen show-video command
+X/0eF X/0ei          # server glyph rasterizer, replaced by feedfont
+X/0e1 X/0eT          # glyph atlas holder
+X/0eG X/0ej          # atlas page
+X/1Ik X/1HH          # glyph atlas
+X/1Im X/1HJ          # atlas slot
+X/1In X/1HK          # rasterized glyph
+X/0FD X/0FG          # config lookup; A01(II) unchanged
+X/0eE X/0eh          # glyph cache (comments only)
+X/0KY X/0M4          # (comments only)
+X/1Ih X/1HE          # (comments only)
+X/0JR X/0JW          # (comments only)
+X/1Ho X/1Gw
+X/0u0 X/0v6
+X/0z5 X/12I
+X/0n2 X/0nu
+X/2Qd X/2hN
+X/0dU X/0dx
+
+# Fields. X/0hd gained one boolean between the old A2K and A2S (found with the one-field restore
+# methods A0D..A0V, whose map keys all moved by 4), so booleans from A2S on moved by two.
+X/0gp A29 X/0hd A2A
+X/0gp A0i X/0hd A0j
+X/0gp A2c X/0hd A2e
+X/0gp A1b X/0hd A1c
+X/0gp A18 X/0hd A19
+X/0gp A2z X/0hd A31
+X/0gp A32 X/0hd A34
+X/0gp A0v X/0hd A0w
+X/0gp A2X X/0hd A2Z
+X/0gp A2k X/0hd A2m
+X/0gs A0M X/0hg A0M
+X/0zb A05 X/12u A05
+X/0zb A07 X/12u A08
+X/0zb A08 X/12u A09
+X/0yb A02 X/11l A02
+X/0yb A04 X/11l A04
+X/0z8 A01 X/12L A02
+X/0z8 A0B X/12L A0C
+X/0z8 A0J X/12L A0K
+X/0z8 A0N X/12L A0O
+X/0z2 A03 X/12F A04
+X/0e1 A00 X/0eT A00
+X/0e1 A02 X/0eT A02
+X/0e1 A03 X/0eT A03
+X/0e1 A04 X/0eT A04
+X/0eG A04 X/0ej A04
+com/facebook/lite/components/scroll/AbsoluteLayoutManager A03 com/facebook/lite/components/scroll/AbsoluteLayoutManager A03
+com/facebook/lite/components/scroll/AbsoluteLayoutManager A0E com/facebook/lite/components/scroll/AbsoluteLayoutManager A0E
+com/facebook/lite/widget/video/FbVideoView A0F com/facebook/lite/widget/video/FbVideoView A0F
+com/facebook/lite/widget/video/FbVideoView A0G com/facebook/lite/widget/video/FbVideoView A0G
+com/facebook/lite/widget/video/FbVideoView A0I com/facebook/lite/widget/video/FbVideoView A0I
+com/facebook/lite/widget/video/FbVideoView A0m com/facebook/lite/widget/video/FbVideoView A0m
+com/facebook/lite/widget/video/FBFullScreenVideoView A05 com/facebook/lite/widget/video/FBFullScreenVideoView A05
+X/0t0 A0a X/0u8 A0a
+X/0t0 A0b X/0u8 A0b
+X/0t0 A0c X/0u8 A0c
+X/2Ab A0D X/2Mf A0D
+X/2Ab A0G X/2Mf A0G
+com/moblica/common/xmob/ui/WindowManager A0C com/moblica/common/xmob/ui/WindowManager A0B
+com/moblica/common/xmob/ui/WindowManager A0B com/moblica/common/xmob/ui/WindowManager A0A
